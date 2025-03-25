@@ -16,4 +16,4 @@ Now refer to it in your `fallback.json` file like so:
         "priority": 0 
     }
 ```
-> NOTE: to use an icon that's not included in your standard icon theme you must set a custom icon path within your `config.toml` file. See ``
+> NOTE: to use an icon that's not included in your standard icon theme you must set a custom icon path within your `config.toml` file. See [Example Config]("https://github.com/Skxxtz/sherlock/blob/main/docs/examples/config.toml") ``
