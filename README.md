@@ -2,9 +2,9 @@
 Sherlock wiki is a simple script to allow you to make a Wikipedia API request from sherlock directly. 
 
 ## Usage
-Download the script and build it using `cargo build --release`.
-Place the resulting file `sherlock-wiki/target/release/sherlock-wiki` into your desired location (for example `~/.config/sherlock/scripts/sherlock-wiki`).
-Now refer to it in your `fallback.json` file like so:
+1. Download the script and build it using `cargo build --release`.
+2. Place the resulting file `sherlock-wiki/target/release/sherlock-wiki` into your desired location (for example `~/.config/sherlock/scripts/sherlock-wiki`).
+3. Now refer to it in your `fallback.json` file like so:
 ```
     {
         "name": "Wikipedia Search",
