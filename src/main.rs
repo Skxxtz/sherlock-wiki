@@ -1,16 +1,16 @@
+use serde::{Deserialize, Serialize};
+use serde_json::Value;
 use std::env;
 use surf;
-use serde_json::Value;
-use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-struct JsonResponse{
+struct JsonResponse {
     title: String,
     content: String,
-    next_content: String
+    next_content: String,
 }
-impl JsonResponse{
-    fn show(&self){
+impl JsonResponse {
+    fn show(&self) {
         let s = serde_json::to_string(self).unwrap();
         println!("{}", s);
     }
@@ -39,7 +39,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .and_then(Value::as_u64)
         .unwrap();
 
-
     let document_url = format!(
         "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts|pageimages&pageids={}&exintro&explaintext",
         pageid
@@ -53,17 +52,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Extract the `pageid` of the first result
     //
     //
-    if let Some(page) = body["query"]["pages"].get(pageid.to_string()){
+    if let Some(page) = body["query"]["pages"].get(pageid.to_string()) {
         let title = page["title"].as_str().unwrap_or("").to_owned();
         let content = page["extract"].as_str().unwrap_or("").to_owned();
         let next_content = page["extract"].as_str().unwrap_or("").to_owned();
-        let r = JsonResponse{
+        let r = JsonResponse {
             title,
             content,
-            next_content
+            next_content,
         };
         r.show();
     };
     Ok(())
 }
-
