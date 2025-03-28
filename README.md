@@ -1,5 +1,10 @@
 # Sherlock-wiki
 Sherlock wiki is a simple script to allow you to make a Wikipedia API request from sherlock directly. 
+<div align="center" style="text-align:center;">
+  <picture>
+    <img alt="application screenshot" width="100%" src="images/showcase.png">
+  </picture>
+</div>
 
 ## Usage
 1. Download the script and build it using `cargo build --release`.
