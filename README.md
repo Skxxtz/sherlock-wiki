@@ -9,6 +9,10 @@ Sherlock wiki is a simple script to allow you to make a Wikipedia API request fr
 
 ## Table of Contents
 - [Getting Started](#getting-started)
+    - [Dependencies](#dependencies)
+    - [Installation](#installation)
+        - [Using the Binary](#using-the-binary)
+        - [From Source](#from-source)
 
 
 
@@ -27,7 +31,7 @@ Additionally, if you're building from source, you will need:
 
 ### 2. Istallation
 
-#### <ins>Using the binary</ins>
+#### <ins>Using the Binary</ins>
 1. Go to [releases](https://github.com/Skxxtz/sherlock-wiki/releases) and download the latest release
 2. Extract the resulting archive
 ```bash
@@ -66,7 +70,7 @@ cd sherlock-wiki
 ```bash
 cargo build --release
 ```
-3. Install the binary:
+3. Install the inary:
 ```bash
 mkdir -p ~/.config/sherlock/scripts/
 cp target/release/sherlock-wiki ~/.config/sherlock/scripts/
