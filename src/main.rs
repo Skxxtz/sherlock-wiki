@@ -18,8 +18,8 @@ impl JsonResponse {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let args: Vec<String> = env::args().collect();
-    let keyword = &args[1];
+    let args: Vec<String> = env::args().skip(1).collect();
+    let keyword = &args.join("%20");
     let search_url = format!(
         "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch={}&srlimit=1",
         keyword
