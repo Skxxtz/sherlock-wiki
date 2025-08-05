@@ -85,7 +85,7 @@ You can now refer to `sherlock-wiki` in your `fallback.json` file like so:
         "type": "bulk_text",
         "on_return": "next",
         "async": true, 
-        "args": {"icon": "wikipedia", "exec": "/home/basti/.config/sherlock/scripts/sherlock-wiki", "exec-args": "'{keyword}'"},
+        "args": {"icon": "wikipedia", "exec": "~/.config/sherlock/scripts/sherlock-wiki", "exec-args": "'{keyword}'"},
         "priority": 0 
     }
 ```
